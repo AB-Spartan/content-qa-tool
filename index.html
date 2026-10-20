@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review product catalog data before publication with Content QA Tool.">
+    <title>Content QA Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/papaparse@5.5.3/papaparse.min.js"></script>
+    <script defer src="validation.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="brand" href="index.html">Content QA Tool</a>
+        <span class="version-label">Portfolio project · MVP</span>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="page-intro">
+        <p class="eyebrow">Product catalog quality</p>
+        <h1>A clearer view of your product data.</h1>
+        <p>Check your catalog for missing fields, duplicates, and formatting issues before publication.</p>
+      </div>
+
+      <section class="panel import-section" aria-labelledby="import-heading">
+        <h2 id="import-heading">Import your product catalog</h2>
+        <p>Try the demo catalog or choose your own CSV file to check its product content.</p>
+
+        <div class="demo-intro">
+          <button type="button" id="demo-button" class="secondary-button" aria-describedby="demo-help">Load Demo</button>
+          <p class="field-help" id="demo-help">Explore 12 fictional products with deliberate errors and warnings.</p>
+        </div>
+
+        <div class="file-field">
+          <label for="csv-file">Choose a CSV file</label>
+          <input type="file" id="csv-file" name="csv-file" accept=".csv,text/csv" aria-describedby="file-help prototype-note">
+          <p class="field-help" id="file-help">Expected columns: <code>sku,name,category,price,stock,description,image_url</code></p>
+        </div>
+
+        <div class="import-actions">
+          <button type="button" id="import-button" disabled aria-describedby="prototype-note">Import CSV</button>
+          <button type="button" id="report-button" disabled aria-describedby="report-help">Download QA Report</button>
+          <a href="sample-products.csv" download>Download sample CSV</a>
+        </div>
+        <p class="field-help" id="prototype-note">Choose a UTF-8 CSV file, then select Import CSV to check its products and see validation results.</p>
+        <p class="field-help" id="report-help">Download an issues-only CSV report after validation finds errors or warnings.</p>
+        <p class="field-help" id="import-status" role="status" aria-live="polite" aria-atomic="true">Choose a CSV file to begin.</p>
+        <noscript><p>Enable JavaScript to import a CSV file.</p></noscript>
+      </section>
+
+      <section class="summary-section" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Catalog overview</h2>
+        <p class="section-description">Product counts and validation results appear after import.</p>
+        <dl class="summary-grid">
+          <div class="summary-card">
+            <dt>Total products</dt>
+            <dd><span id="total-products">—</span> <span class="visually-hidden" id="total-status">Not imported yet</span>
+              <p>Product rows in your CSV</p>
+            </dd>
+          </div>
+          <div class="summary-card error-summary">
+            <dt><span class="status-dot error-dot" aria-hidden="true"></span>Errors</dt>
+            <dd><span id="error-count">—</span> <span class="visually-hidden" id="error-status">Not checked yet</span>
+              <p>Issues that need fixing</p>
+            </dd>
+          </div>
+          <div class="summary-card warning-summary">
+            <dt><span class="status-dot warning-dot" aria-hidden="true"></span>Warnings</dt>
+            <dd><span id="warning-count">—</span> <span class="visually-hidden" id="warning-status">Not checked yet</span>
+              <p>Content worth reviewing</p>
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="panel results-section" aria-labelledby="results-heading">
+        <div class="results-intro">
+          <h2 id="results-heading">Validation results</h2>
+          <p>Each issue shows the affected product, field, and reason. Product rows start at 1, excluding the header and blank rows.</p>
+          <p class="table-help" id="table-help">On smaller screens, scroll the table sideways to read every column. With keyboard focus on the table, use the arrow keys.</p>
+        </div>
+        <div class="table-scroll" role="region" aria-label="Validation results table" aria-describedby="table-help" tabindex="0">
+          <table>
+            <caption class="visually-hidden">Product catalog validation issues</caption>
+            <thead>
+              <tr>
+                <th scope="col">Product row</th>
+                <th scope="col">SKU</th>
+                <th scope="col">Field</th>
+                <th scope="col">Severity</th>
+                <th scope="col">Issue</th>
+              </tr>
+            </thead>
+            <tbody id="results-body">
+              <tr>
+                <td class="empty-state" colspan="5">
+                  <strong>No validation results yet</strong>
+                  <span>Import a CSV to check its products and see issues here.</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container site-footer">Content QA Tool · A simpler catalog review workflow.</footer>
+  </body>
+</html>

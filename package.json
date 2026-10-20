@@ -1,0 +1,10 @@
+{
+  "name": "content-qa-tool",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "papaparse": "5.5.3"
+  }
+}

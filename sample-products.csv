@@ -1,0 +1,13 @@
+sku,name,category,price,stock,description,image_url
+SKU-001,Canvas Tote Bag,Accessories,19.90,25,Reusable cotton tote bag,https://example.com/images/tote.jpg
+SKU-002,"Notebook, A5",Stationery,8.50,0,Plain paper notebook,https://example.com/images/notebook.jpg
+SKU-003,Desk Organizer,Office,24.00,8,,
+SKU-004,Ceramic Mug,Kitchen,12.00,14,Blue ceramic mug,https://example.com/images/mug.jpg
+sku-004,Travel Mug,Kitchen,18.00,9,Insulated travel mug,https://example.com/images/travel-mug.jpg
+,Wooden Pencil,Stationery,1.50,50,Graphite pencil,https://example.com/images/pencil.jpg
+SKU-007,,,,,Fictional item with required fields missing,https://example.com/images/item.jpg
+SKU-008,Reading Lamp,Office,free,many,Adjustable desk lamp,https://example.com/images/lamp.jpg
+SKU-009,Coaster Set,Kitchen,0,-2,Cork coaster set,https://example.com/images/coasters.jpg
+SKU-010,Cotton Cushion,Home,-15.00,2.5,Soft cotton cushion,https://example.com/images/cushion.jpg
+SKU-011,Wall Print,Home,14.00,6,,www.example.com/print.jpg
+SKU-012,Storage Basket,Home,"12,50",2.0,Woven storage basket,https://example.com/images/basket.jpg
