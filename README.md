@@ -30,9 +30,10 @@ rows**. The sample report contains 19 records plus its header.
 
 ## Run locally
 
-From the project folder, start a static web server. For example, with Python 3:
+Clone the repository, then start a static web server. For example, with Python 3:
 
 ```sh
+git clone https://github.com/AB-Spartan/content-qa-tool.git
 cd content-qa-tool
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
