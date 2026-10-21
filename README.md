@@ -20,13 +20,15 @@ HTML, CSS and vanilla JavaScript, with [Papa Parse](https://www.papaparse.com/)
 download APIs. Tests use Node.js's built-in test runner. No framework, backend
 or build step is required to run the app.
 
-## Demo
+## Live demo
 
-A public live demo has not been deployed yet. GitHub Pages is not enabled.
+Try Content QA Tool:
+https://ab-spartan.github.io/content-qa-tool/
 
-To explore the app locally, serve the project as described below and select
-**Load Demo**. Expected results: **12 products, 15 errors, 4 warnings and 19 issue
-rows**. The sample report contains 19 records plus its header.
+Click **Load Demo** to analyze 12 fictional products
+containing 15 errors and 4 warnings.
+
+You can also upload your own CSV and download a QA report.
 
 ## Run locally
 
